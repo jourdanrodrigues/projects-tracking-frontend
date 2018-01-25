@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import {Bar, Doughnut} from 'react-chartjs-2'
+import {Bar, Doughnut} from 'react-chartjs-2';
+
+import Card from './components/Card';
+import NavBar from './containers/NavBar';
 
 function _getLinearityData() {
   let bugsOpenBackgroundColor = 'rgba(75, 192, 192, 0.2)';
@@ -54,24 +57,7 @@ class App extends Component {
     let severityData = _getSeverityData();
     return (
       <div className="App">
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-          <a className="navbar-brand" href="#">Tracking</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                  aria-controls="navbarsExampleDefault"
-                  aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"/>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Bugbox
-                  <span className="sr-only">(current)</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <NavBar/>
         <main role="main">
           <div className="container pt-5 mb-5">
             <div className="row">
@@ -80,30 +66,10 @@ class App extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-3">
-                <div className="card text-white bg-info p-2" id="js-average-days">
-                  <h2>Some days</h2>
-                  <small>Average time last week</small>
-                </div>
-              </div>
-              <div className="col-3">
-                <div className="card p-2" id="js-total-bugs">
-                  <h2>Some tasks</h2>
-                  <small>Bugs within current sprint</small>
-                </div>
-              </div>
-              <div className="col-3">
-                <div className="card p-2" id="js-bugs-solved">
-                  <h2>Some closed</h2>
-                  <small>Bugs solved this week</small>
-                </div>
-              </div>
-              <div className="col-3">
-                <div className="card p-2" id="js-assigned">
-                  <h2>Some assigned</h2>
-                  <small>Tasks assigned to engineers</small>
-                </div>
-              </div>
+              <Card title="Some days" subtitle="Average time last week" primary={true}/>
+              <Card title="Some tasks" subtitle="Bugs within current sprint"/>
+              <Card title="Some closed" subtitle="Bugs solved this week"/>
+              <Card title="Some assigned" subtitle="Tasks assigned to engineers"/>
             </div>
             <div className="row mt-3">
               <div className="col-12">

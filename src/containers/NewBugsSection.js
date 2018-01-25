@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class NewBugsSection extends React.Component {
   render() {
@@ -8,8 +9,9 @@ class NewBugsSection extends React.Component {
           <div className="card-header">New bugs this week</div>
           <div className="card-body">
             <ul>
-              <li className="mb-2">Task 1</li>
-              <li className="mb-2">Task 2</li>
+              {this.props.newTasks.map((task, i) => (
+                <li className="mb-2" key={i}>{task}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -17,5 +19,9 @@ class NewBugsSection extends React.Component {
     )
   }
 }
+
+NewBugsSection.propTypes = {
+  newTasks: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default NewBugsSection;

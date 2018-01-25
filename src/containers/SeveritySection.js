@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Doughnut} from 'react-chartjs-2';
 
-class SeverityDoughnut extends React.Component {
+class SeveritySection extends React.Component {
   render() {
     const doughnutData = {
       datasets: [{
         label: 'Severity',
-        data: this.props.data,
+        data: [
+          this.props.highPriorityCount,
+          this.props.mediumPriorityCount,
+          this.props.lowPriorityCount,
+        ],
         backgroundColor: [
           'rgba(153, 102, 255, 0.2)',
           'rgba(255, 159, 64, 0.2)',
@@ -29,8 +33,10 @@ class SeverityDoughnut extends React.Component {
   }
 }
 
-SeverityDoughnut.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.number),
+SeveritySection.propTypes = {
+  highPriorityCount: PropTypes.number,
+  mediumPriorityCount: PropTypes.number,
+  lowPriorityCount: PropTypes.number,
 };
 
-export default SeverityDoughnut;
+export default SeveritySection;

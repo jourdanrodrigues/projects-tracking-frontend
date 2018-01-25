@@ -38,9 +38,7 @@ class LinearitySection extends React.Component {
         <div className="card">
           <div className="card-header">Linearity</div>
           <div className="card-body">
-            <div className="feature-chart feature-chart__right">
-              <Bar data={barData} height={150} width={300}/>
-            </div>
+            <Bar data={barData} height={150} width={300}/>
           </div>
         </div>
       </div>

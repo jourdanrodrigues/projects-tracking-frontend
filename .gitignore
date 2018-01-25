@@ -8,4 +8,5 @@ yarn-error.log*
 # Directories
 build/
 coverage/
+.idea/
 node_modules/

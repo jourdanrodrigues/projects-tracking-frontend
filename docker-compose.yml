@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  projects-tracking-frontend:
+    build: .
+    command: yarn start
+    env_file:
+      # If the port 3000 is already allocated, you can change it by setting "PORT"
+      # in this file and change the host port of the "ports" section
+      - .env
+    ports:
+      - "3000:3000" # "{Host port}:{Container port}"

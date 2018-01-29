@@ -8,7 +8,7 @@ First of all:
 
 - Duplicate the file `.env.example`, renaming it to `.env`;
 - Fill the placeholders that are between curly brackets (removing the curly brackets as well);
-- Uncomment (remove the "#" and the space char right after it) the variables you want to use. 
+- Uncomment (remove the "#" and the space char right after it from) the variables you want to use. 
 
 #### Docker
 

@@ -24,4 +24,6 @@ Make sure you have [NodeJS v9.2](https://nodejs.org/en/download/) and Yarn v1.3.
 
 2. Run `yarn start dev`;
 
-That's it, look for [`http://localhost:3000/`](http://localhost:3000/) (or the port you used in the `.env`).
+
+#### That's it!
+Open [`http://localhost:3000/`](http://localhost:3000/) (or the port you used in the `.env`).

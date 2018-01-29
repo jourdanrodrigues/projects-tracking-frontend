@@ -28,7 +28,7 @@ let dotEnvFiles = [
 dotEnvFiles.forEach(dotEnvFile => {
   if (fs.existsSync(dotEnvFile)) {
     require('dotenv-expand')(
-      require('dotenv').config({path: dotEnvFile})
+      require('dotenv').config({path: dotEnvFile, silent: true})
     );
   }
 });

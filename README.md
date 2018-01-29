@@ -2,12 +2,12 @@
 
 ## Development
 
-### Setting up environment and turning it on
+### Setting up environment and running the app
 
 First of all:
 
 - Duplicate the file `.env.example`, renaming it to `.env`;
-- Fill the placeholders that is between curly brackets (removing the curly brackets as well);
+- Fill the placeholders that are between curly brackets (removing the curly brackets as well);
 - Uncomment (remove the "#" and the space char right after it) the variables you want to use. 
 
 #### Docker
@@ -18,7 +18,7 @@ Make sure you have [Docker](https://store.docker.com/search?type=edition&offerin
 
 #### Manually
 
-Make sure you have [NodeJS v9.2](https://nodejs.org/en/download/) and Yarn v1.3 installed on your machine.
+Make sure you have [NodeJS v9.2](https://nodejs.org/en/download/) and Yarn v1.3.2 installed on your machine.
 
 1. Run `yarn install` (might take a couple of minutes to end);
 
